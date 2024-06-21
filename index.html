@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Selamat Ulang Tahun</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(120deg, #b8e994 0%, #6abf4b 100%);
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .card {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #388E3C;
+            transform: scale(1.05);
+        }
+
+        .birthday-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            animation: float 10s infinite;
+            width: 100px;
+            opacity: 0.9;
+        }
+
+        .balloon1 {
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .balloon2 {
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        .balloon3 {
+            left: 80%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Happy Birthday!</h1>
+            <img src="file:///C:/Users/ASUS-/Downloads/IMG-20210228-WA0051.jpg" alt="Birthday Image" class="birthday-image">
+            <p id="message"></p>
+            <button onclick="showMessage()">Lihat Ucapan</button>
+        </div>
+    </div>
+    <div class="balloons">
+        <img src="https://imgx.sonora.id/crop/0x0:0x0/700x465/photo/2020/07/30/1751318880.jpg" alt="Balloon" class="balloon balloon1">
+        <img src="https://imgx.sonora.id/crop/0x0:0x0/700x465/photo/2020/07/30/1751318880.jpg" alt="Balloon" class="balloon balloon2">
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById('message').innerText = 'Happy Birtday nisaa, semoga cita-cita kamu bisa tercapai yaa, sukses terus buat karir kamu!';
+        }
+    </script>
+</body>
+</html>
